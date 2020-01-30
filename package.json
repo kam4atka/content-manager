@@ -1,0 +1,46 @@
+{
+  "name": "content-manager",
+  "version": "0.0.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
+    "build": "gulp build"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "author": "kam4atka",
+  "license": "ISC",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "@types/chrome": "0.0.93",
+    "autoprefixer": "^9.7.4",
+    "del": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-htmlacademy": "^0.5.2",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "stylelint": "^13.0.0",
+    "stylelint-config-htmlacademy": "^0.1.4",
+    "typescript": "^3.7.5"
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"name": "Content manager",
+	"description": "Управление текстовым контентом",
+	"version": "0.0.3",
+	"permissions": ["activeTab"],
+	"icons": {"128": "img/128.png"},
+	"browser_action": {
+		"default_icon": "img/128.png",
+		"default_popup": "index.html"
+	},
+	"manifest_version": 2
+}

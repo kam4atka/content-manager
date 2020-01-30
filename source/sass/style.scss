@@ -1,0 +1,45 @@
+.cm__modal {
+  width: 300px;
+  font-size: 12px;
+}
+
+.cm__modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.cm__modal-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.cm__modal-title {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cm__modal-desc {
+  border-top: 1px dotted rgba(0, 0, 0, 0.5);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cm__modal-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.cm__modal-btn {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

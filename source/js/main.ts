@@ -1,10 +1,18 @@
-var editModeHandler = function (e) {
+let onClickHandler = function (e) {
   e.preventDefault();
-  chrome.tabs.executeScript({
-    file: 'js/editmode.js'
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {action: "start"});
+  });
+};
+
+let offClickHandler = function (e) {
+  e.preventDefault();
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {action: "stop"});
   });
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('#edit-mode').addEventListener('click', editModeHandler);
+  document.querySelector('#btn-on').addEventListener('click', onClickHandler);
+  document.querySelector('#btn-off').addEventListener('click', offClickHandler);
 });

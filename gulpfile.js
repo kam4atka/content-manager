@@ -24,14 +24,23 @@ gulp.task("copy", () => {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("css", () => {
-  return gulp.src("source/sass/*.scss")
+gulp.task("css-common", () => {
+  return gulp.src("source/sass/main.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
+    .pipe(gulp.dest("build/css"))
+});
+
+gulp.task("css-mode", () => {
+  return gulp.src("source/sass/cmanager.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(gulp.dest("build/css"))
 });
 
@@ -46,4 +55,4 @@ gulp.task("js-common", () => {
     .pipe(gulp.dest("build/js"))
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "html", "js-common"));
+gulp.task("build", gulp.series("clean", "copy", "css-common", "css-mode", "html", "js-common"));

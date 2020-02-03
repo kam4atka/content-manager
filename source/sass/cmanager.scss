@@ -1,0 +1,30 @@
+/* variables */
+$color-bg-wrapper: rgba(184, 241, 222, 1);
+$color-bg-border: rgba(216, 125, 125, 0.5);
+
+/* main */
+.cmanager-border {
+  width: 50px;
+  height: 100%;
+  background-color: $color-bg-border;
+}
+
+.cmanager-wrapper {
+  padding: 10px;
+  width: 400px;
+  background-color: $color-bg-wrapper;
+}
+
+.cmanager-info__title,
+.cmanager-info__classes,
+.cmanager-info__childrens {
+  margin: 0 0 1em 0;
+}
+
+.cmanager-info__classes {
+  margin-left: 10px;
+}
+
+.cmanager-info__childrens {
+  margin-left: 10px;
+}

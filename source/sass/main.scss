@@ -1,0 +1,67 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.cm__modal {
+  width: 300px;
+  font-size: 12px;
+}
+
+.cm__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.cm__header-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.cm__header-title {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cm__content-desc {
+  border-top: 1px dotted rgba(0, 0, 0, 0.5);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cm__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.cm__btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+
+  &_off {
+    color: rgb(255, 255, 255);
+    background: rgba(255, 0, 155, 1);
+  }
+
+  &_on {
+    color: rgb(0, 0, 0);
+    background: rgba(105, 255, 155, 1);
+  }
+}

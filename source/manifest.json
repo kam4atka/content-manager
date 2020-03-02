@@ -1,7 +1,7 @@
 {
 	"name": "Content manager",
-	"description": "Управление текстовым контентом",
-	"version": "0.0.3",
+	"description": "Тестирование верстки сайта на переполнение контента",
+	"version": "1.0.0",
 	"permissions": ["activeTab"],
 	"icons": {"128": "img/128.png"},
 	"browser_action": {

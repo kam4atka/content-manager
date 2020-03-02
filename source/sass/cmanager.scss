@@ -1,18 +1,58 @@
 /* variables */
-$color-bg-wrapper: rgba(184, 241, 222, 1);
-$color-bg-border: rgba(216, 125, 125, 0.5);
+$color-bg-info: rgba(184, 241, 222, 1);
+$color-bg-controls: #1d1e22;
+$color-text: #de7300;
+$color-text-info: #74b087;
+$color-neon: #baecff;
+
 
 /* main */
-.cmanager-border {
-  width: 50px;
-  height: 100%;
-  background-color: $color-bg-border;
+.cmanager-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  padding: 10px;
+  background-color: $color-bg-controls;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0px 0px 5px 0px #baecff;
+  transform: translateY(-50%);
+  z-index: 999;
 }
 
-.cmanager-wrapper {
+.cmanager-controls__btn {
+  width: 40px;
+  height: 40px;
+  margin: 0 0 5px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: $color-text;
+  background-color: transparent;
+  border: 1px solid $color-text;
+  border-radius: 5px;
+  outline: none;
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-bg-controls;
+    background-color: $color-text;
+  }
+}
+
+.cmanager-info {
   padding: 10px;
   width: 400px;
-  background-color: $color-bg-wrapper;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: $color-text-info;
+  background-color: $color-bg-controls;
+  box-shadow: 0px 0px 5px 0px #baecff;
+  z-index: 999;
 }
 
 .cmanager-info__title,
@@ -27,4 +67,23 @@ $color-bg-border: rgba(216, 125, 125, 0.5);
 
 .cmanager-info__childrens {
   margin-left: 10px;
+}
+
+.cmanager-info__btn {
+  height: 40px;
+  margin: 0 0 0 5px;
+  padding: 0 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: $color-text-info;
+  background-color: transparent;
+  border: 1px solid $color-text-info;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $color-bg-controls;
+    background-color: $color-text-info;
+  }
 }
